@@ -148,16 +148,17 @@ nav {
     }
 
     .nav-logo {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .nav-menue {
-        margin-top: 1.1rem;
+        margin-top: 1.2rem;
+        font-weight: 900;
     }
 
     .nav-list {
         flex-direction: column;
-        font-size: 2rem;
+        font-size: 1.25rem;
         text-align: center;
         gap: 1rem;
     }
@@ -166,19 +167,24 @@ nav {
         flex-direction: column;
     }
 
-    .banner-content{
+    .banner-content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
     }
-    .banner-img {
-        background-size: contain;
 
+    .banner-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .banner-img img {
-        margin: 0;
+        width: 100%;
+        max-width: 800px;
+        margin-right: 0;
     }
 }
