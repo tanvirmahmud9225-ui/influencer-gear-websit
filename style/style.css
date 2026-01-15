@@ -67,6 +67,7 @@ header {
 nav {
     justify-content: space-between;
     align-items: center;
+    gap: 150px;
 }
 
 .nav-list {
@@ -88,9 +89,12 @@ nav {
 #banner-section {
     justify-content: space-between;
     align-items: center;
-    gap: 33px;
     margin-top: 42px;
     padding: 0px 0px;
+}
+
+.banner-content {
+    width: 540px;
 }
 
 .banner-title {
@@ -104,7 +108,8 @@ nav {
     margin-bottom: 1.2rem;
 }
 
-#banner-btn a {
+#banner-btn a,
+#feature-btn a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -118,7 +123,8 @@ nav {
     font-size: 1.1rem;
 }
 
-#banner-btn .fa-arrow-right {
+#banner-btn .fa-arrow-right,
+#feature-btn .fa-arrow-right {
     margin-left: 10px;
 }
 
@@ -140,11 +146,12 @@ nav {
 
 /* Products-section style */
 #products {
+    margin-top: 80px;
     margin-bottom: 200px;
 }
 
 .product-container {
-    max-width: 1148px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -171,11 +178,12 @@ nav {
     padding: 15px 20px;
     max-width: 380px;
     width: 100%;
+    border-radius: 10px;
 }
 
 .product-img {
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
     margin-bottom: 1rem;
 }
 
@@ -215,8 +223,39 @@ nav {
 }
 
 
+/* Features - styles */
+.feature-container {
+    align-items: center;
+    gap: 98px;
+}
+
+.feature-img img {
+    max-width: 405px;
+}
+
+.feature-title {
+    font-size: 2.375rem;
+    margin-bottom: 16px;
+}
+
+.feature-description {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--5th-text-color);
+    margin-bottom: 1rem;
+    max-width: 31.563rem;
+    line-height: 1.75rem;
+}
+
+#feature-btn {
+    border-radius: 0;
+}
+
 @media screen and (max-width:576px) {
-    .div-center, .product-container {
+
+    .div-center,
+    .product-container,
+    .feature-container {
         width: 95%;
     }
 
@@ -264,14 +303,46 @@ nav {
         max-width: 800px;
         margin-right: 0;
     }
-    .product-box{
+
+    #products {
+        margin-bottom: 20px;
+    }
+
+    .product-box {
         grid-template-columns: 1fr;
+    }
+
+    .feature-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .feature-img img {
+        width: 100%;
+    }
+
+    .feature-content {
+        text-align: center;
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
     }
 }
 
 
-@media screen and (min-width:577px) and (max-width:1200px){
-    .product-box{
+@media screen and (min-width:577px) and (max-width:1200px) {
+    .product-box {
         grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .product-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-card {
+        max-width: 600px;
     }
 }
